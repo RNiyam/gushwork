@@ -178,31 +178,6 @@
     });
   }
 
-  /* ---------- Technical specs: datasheet download (href from JSON per product) ---------- */
-
-  function initDatasheetDownload() {
-    var btn = document.querySelector("[data-datasheet-download]");
-    if (!btn) return;
-
-    btn.addEventListener("click", function (e) {
-      var href = (btn.getAttribute("href") || "").trim();
-      if (!href || href === "#" || href === "#!") {
-        e.preventDefault();
-        btn.dispatchEvent(
-          new CustomEvent("mangalam:datasheet-request", {
-            bubbles: true,
-            detail: { trigger: btn },
-          })
-        );
-        return;
-      }
-      if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
-        e.preventDefault();
-        global.open(href, "_blank", "noopener,noreferrer");
-      }
-    });
-  }
-
   /* ---------- Hero CTAs (Get Custom Quote, View Technical Specs) ---------- */
 
   function initProductCtas() {
@@ -260,7 +235,6 @@
     initProductCarousel();
     initProductsDropdown();
     initNavProductSwitching();
-    initDatasheetDownload();
     initProductCtas();
   }
 

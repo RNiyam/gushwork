@@ -168,5 +168,42 @@
     "logoSrc": "euroflex.png",
     "logoAlt": "Euroflex",
     "logosPerSegment": 6
+  },
+  "featuresSection": {
+    "title": "Built to Last. Engineered to Perform.",
+    "subtitle": "From transmission mains to industrial process lines, Mangalam HDPE delivers precision-engineered piping for every stage of your infrastructure.",
+    "ctaLabel": "Request a Quote",
+    "cards": [
+      {
+        "icon": "droplet",
+        "title": "Superior Chemical Resistance",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      },
+      {
+        "icon": "wave",
+        "title": "Exceptional Flexibility & Durability",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      },
+      {
+        "icon": "link",
+        "title": "Leak-Proof Fusion Welding",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      },
+      {
+        "icon": "coin",
+        "title": "Cost-Effective Long-Term Solution",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      },
+      {
+        "icon": "leaf",
+        "title": "Environmentally Sustainable",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      },
+      {
+        "icon": "badge",
+        "title": "Certified Quality Assurance",
+        "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
+      }
+    ]
   }
 }

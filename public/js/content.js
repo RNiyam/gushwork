@@ -174,13 +174,74 @@
       .join("");
   }
 
+  var FEATURE_ICONS = {
+    droplet:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2.5c2.5 4 5 7.2 5 10.2a5 5 0 1 1-10 0c0-3 2.5-6.2 5-10.2z"/></svg>',
+    wave:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M4 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>',
+    link:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 13a5 5 0 0 1 7 0l2 2a5 5 0 1 1-7 7l-1-1"/><path d="M14 11a5 5 0 0 0-7 0L5 13a5 5 0 1 0 7 7l1-1"/></svg>',
+    coin:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10h6M9 14h6M12 10v4"/></svg>',
+    leaf:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13V6l2 2a7 7 0 0 1 5-3h3a7 7 0 0 1 7 7c0 3-2 6-5 7"/></svg>',
+    badge:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l2.4 4.9L20 8l-4 3.9L17 18l-5-2.7L7 18l1-6.1L4 8l5.6-1.1z"/></svg>',
+    gear:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>',
+  };
+
+  function renderFeatureCard(card) {
+    var iconKey = card.icon || "gear";
+    var svg = FEATURE_ICONS[iconKey] || FEATURE_ICONS.gear;
+    var imgSrc = card.imageSrc;
+    var mediaInner = imgSrc
+      ? '<img src="' + escapeHtml(imgSrc) + '" alt="" loading="lazy" decoding="async">'
+      : '<div class="features-fold__card-icon">' + svg + "</div>";
+    return (
+      '<article class="features-fold__card">' +
+      '<div class="features-fold__card-media">' +
+      mediaInner +
+      "</div>" +
+      '<h3 class="features-fold__card-title">' +
+      escapeHtml(card.title || "") +
+      "</h3>" +
+      '<p class="features-fold__card-body">' +
+      escapeHtml(card.body || "") +
+      "</p>" +
+      "</article>"
+    );
+  }
+
+  function renderFeaturesFold(cfg) {
+    var section = document.querySelector("[data-features-fold]");
+    var titleEl = document.getElementById("featuresFoldTitle");
+    var subEl = document.getElementById("featuresFoldSubtitle");
+    var grid = document.getElementById("featuresFoldGrid");
+    var cta = document.getElementById("featuresFoldCta");
+    if (!section || !titleEl || !grid) return;
+
+    if (!cfg || !cfg.cards || !cfg.cards.length) {
+      section.setAttribute("hidden", "");
+      grid.innerHTML = "";
+      titleEl.textContent = "";
+      if (subEl) subEl.textContent = "";
+      return;
+    }
+
+    section.removeAttribute("hidden");
+    titleEl.textContent = cfg.title || "";
+    if (subEl) subEl.textContent = cfg.subtitle || "";
+    grid.innerHTML = cfg.cards.map(renderFeatureCard).join("");
+    if (cta && cfg.ctaLabel) cta.textContent = cfg.ctaLabel;
+  }
+
   function renderTechnicalSpecs(p) {
     var section = document.querySelector("[data-tech-specs-section]");
     var titleEl = document.getElementById("techSpecsHeading");
     var subtitleEl = document.getElementById("techSpecsSubtitle");
     var tbody = document.getElementById("techSpecsTableBody");
-    var btn = document.querySelector("[data-datasheet-download]");
-    var labelSpan = document.querySelector("[data-datasheet-label]");
+    var btn = document.getElementById("techSpecsDatasheetBtn");
     if (!section || !titleEl || !subtitleEl || !tbody || !btn) return;
 
     var ts = p && p.technicalSpecs;
@@ -208,7 +269,7 @@
       .join("");
 
     var dl = ts.datasheetDownload || {};
-    btn.setAttribute("href", dl.href != null && dl.href !== "" ? dl.href : "#");
+    var labelSpan = btn.querySelector("[data-datasheet-label]");
     if (labelSpan) {
       labelSpan.textContent = dl.label || "Download Full Technical Datasheet";
     }
@@ -333,6 +394,7 @@
 
     renderNavProducts(data.navProducts);
     renderTrustedBy(data.trustedBy);
+    renderFeaturesFold(data.featuresSection);
   }
 
   global.MangalamPage = global.MangalamPage || {};
