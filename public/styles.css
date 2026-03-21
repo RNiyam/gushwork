@@ -416,11 +416,14 @@ button.site-header__nav-link {
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* Breadcrumbs above left column; detail spans both rows on the right */
+/*
+ * Hero grid (matches Figma mobile: breadcrumbs → badges/title/features → carousel → price/CTAs).
+ * DOM order is that sequence; desktop places media left column row 2, intro/commerce right column.
+ */
 .product-hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   gap: 1.25rem 3.5rem;
   align-items: start;
   max-width: 1240px;
@@ -433,17 +436,46 @@ button.site-header__nav-link {
   grid-row: 1;
 }
 
+.product-hero__intro {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
 .product-page__media {
   grid-column: 1;
   grid-row: 2;
   max-width: 1240px;
+  min-width: 0;
 }
 
-.product-page__detail {
+.product-hero__commerce {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 2;
   align-self: start;
-  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+/* Intro uses flex gap; drop duplicate bottom margins between badges / title / features */
+.product-hero__intro .cert-badges,
+.product-hero__intro .product-title,
+.product-hero__intro .feature-list {
+  margin-bottom: 0;
+}
+
+.product-hero__commerce .price-card {
+  margin-bottom: 0;
+}
+
+.product-hero__commerce .product-ctas {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .product-title--on-dark {
@@ -953,8 +985,8 @@ button.site-header__nav-link {
 @media (max-width: 960px) {
   .product-hero__grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 1.5rem;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.25rem;
   }
 
   .product-hero__breadcrumbs {
@@ -962,20 +994,25 @@ button.site-header__nav-link {
     grid-row: 1;
   }
 
-  .product-page__media {
+  .product-hero__intro {
     grid-column: 1;
     grid-row: 2;
+    gap: 1.25rem;
   }
 
-  .product-page__detail {
+  .product-page__media {
     grid-column: 1;
     grid-row: 3;
+  }
+
+  .product-hero__commerce {
+    grid-column: 1;
+    grid-row: 4;
   }
 
   .site-header__links {
     gap: 0.5rem 1.25rem;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -984,7 +1021,19 @@ button.site-header__nav-link {
   }
 
   .site-header__inner {
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .site-header__nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .site-header__links {
+    justify-content: center;
   }
 
   .site-header__logo img {
