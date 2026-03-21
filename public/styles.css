@@ -1,6 +1,6 @@
 /* =============================================================================
    Mangalam-style product page
-   - Body: 100px padding all sides; inner containers max-width 1240px
+   - Horizontal inset: fluid gutter (was fixed 100px — broke phones)
    - Primary blue ~#2E4191
    ============================================================================= */
 
@@ -45,6 +45,8 @@ html {
   --header-nav-hit: 44px;
   /* Space below fixed header before hero (smaller = hero sits higher) */
   --content-top-pad: 72px;
+  /* Matches full-bleed sections (.product-hero, .tech-specs); scales down on narrow viewports */
+  --page-gutter: clamp(1rem, 4vw + 0.5rem, 6.25rem);
 }
 
 body {
@@ -52,10 +54,10 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   line-height: 1.5;
   color: var(--color-text);
-  /* Top: header + --content-top-pad; sides/bottom: 100px */
-  padding: calc(var(--header-bar-height) + var(--content-top-pad)) 100px 100px;
+  padding: calc(var(--header-bar-height) + var(--content-top-pad)) var(--page-gutter) var(--page-gutter);
   min-height: 100vh;
   background-color: #ffffff;
+  overflow-x: clip;
 }
 
 img {
@@ -101,7 +103,7 @@ summary:focus-visible {
 }
 
 .skip-link:focus {
-  left: 100px;
+  left: var(--page-gutter);
   top: calc(var(--header-bar-height) + 12px);
   z-index: 400;
 }
@@ -121,7 +123,7 @@ summary:focus-visible {
 }
 
 .site-header__wrap {
-  padding: 0 100px;
+  padding: 0 var(--page-gutter);
   min-height: var(--header-bar-height);
   display: flex;
   align-items: center;
@@ -406,10 +408,10 @@ button.site-header__nav-link {
 
 /* Hero band: full-bleed, white background (tight bottom so Euroflex sits right under grid) */
 .product-hero {
-  margin-left: -100px;
-  margin-right: -100px;
+  margin-left: calc(-1 * var(--page-gutter));
+  margin-right: calc(-1 * var(--page-gutter));
   margin-top: -0.5rem;
-  padding: 1.25rem 100px 2.25rem;
+  padding: 1.25rem var(--page-gutter) 2.25rem;
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -794,10 +796,10 @@ button.site-header__nav-link {
   --tech-specs-border: rgba(255, 255, 255, 0.08);
   --tech-specs-row-line: rgba(255, 255, 255, 0.06);
   --tech-specs-muted: #9ca3af;
-  margin-left: -100px;
-  margin-right: -100px;
+  margin-left: calc(-1 * var(--page-gutter));
+  margin-right: calc(-1 * var(--page-gutter));
   margin-top: 0;
-  padding: clamp(3rem, 6vw, 5rem) 100px clamp(4rem, 8vw, 6rem);
+  padding: clamp(3rem, 6vw, 5rem) var(--page-gutter) clamp(4rem, 8vw, 6rem);
   background: var(--tech-specs-bg);
   color: #fff;
 }
@@ -949,13 +951,6 @@ button.site-header__nav-link {
    ============================================================================= */
 
 @media (max-width: 960px) {
-  .tech-specs {
-    margin-left: -100px;
-    margin-right: -100px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-
   .product-hero__grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -981,17 +976,66 @@ button.site-header__nav-link {
     gap: 0.5rem 1.25rem;
   }
 
-  .product-hero {
-    margin-left: -100px;
-    margin-right: -100px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: calc(var(--header-bar-height) + var(--content-top-pad)) 100px 100px;
+  :root {
+    --content-top-pad: 56px;
+  }
+
+  .site-header__inner {
+    gap: 1rem;
+  }
+
+  .site-header__logo img {
+    max-height: 44px;
+    max-width: min(180px, 48vw);
+  }
+
+  .site-header__links {
+    gap: 0.35rem 0.75rem;
+  }
+
+  .site-header__nav-link,
+  button.site-header__nav-link {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .btn--header {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8125rem;
+  }
+
+  .product-title {
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+  }
+
+  .product-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tech-specs__table thead th.tech-specs__col-head {
+    padding: 0.65rem 0.75rem;
+    font-size: 11px;
+  }
+
+  .tech-specs__table tbody td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .btn--datasheet-ghost {
+    width: 100%;
+    max-width: 22rem;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   .product-carousel__thumb img {
