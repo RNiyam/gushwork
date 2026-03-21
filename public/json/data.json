@@ -6,7 +6,7 @@
       "title": "Premium HDPE Pipes & Coils for Modern Infrastructure",
       "images": [
         {
-          "src": "public/fishnet.jpg",
+          "src": "fishnet.jpg",
           "alt": "Workers on a vessel deck handling bright orange fishing net"
         }
       ],
@@ -59,7 +59,7 @@
       "title": "Heavy-Duty HDPE Coils for Long-Run Installations",
       "images": [
         {
-          "src": "public/fishnet.jpg",
+          "src": "fishnet.jpg",
           "alt": "Coiled HDPE product on site"
         }
       ],
@@ -110,7 +110,7 @@
       "title": "Precision HDPE Fittings & Fusion Accessories",
       "images": [
         {
-          "src": "public/fishnet.jpg",
+          "src": "fishnet.jpg",
           "alt": "HDPE fittings and accessories"
         }
       ],
@@ -165,7 +165,7 @@
   "defaultProductId": "hdpe-pipes",
   "trustedBy": {
     "headline": "Trusted by Hundreds of Companies Globally",
-    "logoSrc": "public/euroflex.png",
+    "logoSrc": "euroflex.png",
     "logoAlt": "Euroflex",
     "logosPerSegment": 6
   }
