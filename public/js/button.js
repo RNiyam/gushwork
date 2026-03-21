@@ -166,6 +166,11 @@
 
   global.MangalamPage = global.MangalamPage || {};
   global.MangalamPage.initButtonModals = initModals;
+  global.MangalamPage.prefillCatalogueEmail = function (email) {
+    var input = document.getElementById("catalogue-email");
+    if (input) input.value = email != null ? String(email) : "";
+  };
+
   global.MangalamPage.openCatalogueModal = function () {
     openModal("modal-catalogue");
   };

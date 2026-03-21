@@ -6,7 +6,7 @@
   <title>Gushwork | Mangalam HDPE Pipes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -199,14 +199,246 @@
             type="button"
             class="btn btn--primary btn--lg"
             id="featuresFoldCta"
-            data-open-catalogue-modal
+            data-open-callback-modal
           >
             Request a Quote
           </button>
         </div>
       </div>
     </section>
+
+    <section class="faq-fold fold-animate" id="faq-section" data-faq-section hidden aria-labelledby="faqSectionTitle">
+      <div class="container faq-fold__wrap">
+        <div class="faq-fold__content">
+          <h2 class="faq-fold__title" id="faqSectionTitle"></h2>
+          <div class="faq-accordion" id="faqAccordion"></div>
+
+          <div class="faq-fold__catalogue catalogue-cta--in-faq" id="catalogue-cta-block" data-catalogue-cta hidden>
+            <div class="catalogue-cta__inner">
+              <div class="catalogue-cta__copy">
+                <h3 class="catalogue-cta__title" id="catalogueCtaTitle"></h3>
+                <p class="catalogue-cta__subtitle" id="catalogueCtaSubtitle"></p>
+              </div>
+              <form class="catalogue-cta__form catalogue-cta__form--faq" id="catalogueInlineForm" novalidate>
+                <label class="sr-only" for="catalogueInlineEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="catalogueInlineEmail"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="Email Address"
+                  class="catalogue-cta__input"
+                />
+                <button type="submit" class="btn btn--catalogue-cta" id="catalogueCtaBtn">Request Catalogue</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="applications-fold fold-animate" id="applications-section" data-applications-section hidden aria-labelledby="applicationsTitle">
+      <div class="applications-fold__inner">
+        <div class="applications-fold__head">
+          <div class="applications-fold__head-text">
+            <h2 class="applications-fold__title" id="applicationsTitle"></h2>
+            <p class="applications-fold__subtitle" id="applicationsSubtitle"></p>
+          </div>
+        </div>
+        <div class="applications-fold__stage">
+          <div
+            class="applications-fold__viewport"
+            tabindex="0"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Industry application cards"
+          >
+            <div class="applications-fold__track" id="applicationsTrack"></div>
+          </div>
+          <div class="applications-fold__nav-overlay" role="group" aria-label="Slide navigation">
+            <button
+              type="button"
+              class="applications-fold__arrow applications-fold__arrow--overlay applications-fold__arrow--prev"
+              data-apps-prev
+              aria-label="Previous slides"
+            >
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <button
+              type="button"
+              class="applications-fold__arrow applications-fold__arrow--overlay applications-fold__arrow--next"
+              data-apps-next
+              aria-label="Next slides"
+            >
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-fold fold-animate" id="process-section" data-process-section hidden aria-labelledby="processTitle">
+      <div class="container">
+        <h2 class="process-fold__title" id="processTitle"></h2>
+        <p class="process-fold__subtitle" id="processSubtitle"></p>
+        <div class="process-fold__sheet">
+          <div class="process-fold__tabs-scroller">
+            <div class="process-fold__tabs" id="processTabs" role="tablist" aria-label="Manufacturing steps"></div>
+          </div>
+          <div class="process-fold__card" id="processCardPanel" role="tabpanel">
+            <div class="process-fold__card-text" id="processCardText"></div>
+            <div class="process-fold__card-media">
+              <div class="process-step-carousel" data-process-carousel>
+                <div class="process-step-carousel__viewport">
+                  <div class="process-step-carousel__track" id="processCarouselTrack"></div>
+                </div>
+                <div class="process-step-carousel__nav-overlay">
+                  <button
+                    type="button"
+                    class="process-step-carousel__arrow process-step-carousel__arrow--prev"
+                    data-process-carousel-prev
+                    aria-label="Previous image"
+                  >
+                    <span aria-hidden="true">&#8249;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="process-step-carousel__arrow process-step-carousel__arrow--next"
+                    data-process-carousel-next
+                    aria-label="Next image"
+                  >
+                    <span aria-hidden="true">&#8250;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-fold fold-animate" id="trust-section" data-trust-section hidden aria-labelledby="trustTitle">
+      <div class="container">
+        <h2 class="trust-fold__title" id="trustTitle"></h2>
+        <p class="trust-fold__subtitle" id="trustSubtitle"></p>
+        <div class="trust-fold__grid" id="trustQuotesGrid"></div>
+      </div>
+    </section>
+
+    <section
+      class="portfolio-fold fold-animate"
+      id="portfolio-section"
+      data-portfolio-section
+      hidden
+      aria-labelledby="portfolioTitle"
+    >
+      <div class="container portfolio-fold__inner">
+        <h2 class="portfolio-fold__title" id="portfolioTitle"></h2>
+        <p class="portfolio-fold__subtitle" id="portfolioSubtitle"></p>
+        <div class="portfolio-fold__cards" id="portfolioCardsGrid"></div>
+        <div class="portfolio-fold__bottom-cta" id="portfolioBottomCta" hidden></div>
+      </div>
+    </section>
+
+    <section
+      class="resources-fold fold-animate"
+      id="resources-section"
+      data-resources-section
+      hidden
+      aria-labelledby="resourcesTitle"
+    >
+      <div class="container resources-fold__inner">
+        <h2 class="resources-fold__title" id="resourcesTitle"></h2>
+        <p class="resources-fold__subtitle" id="resourcesSubtitle"></p>
+        <div class="resources-fold__card" id="resourcesList"></div>
+      </div>
+    </section>
+
+    <section
+      class="contact-band fold-animate"
+      id="contact-band-section"
+      data-contact-band-section
+      hidden
+      aria-labelledby="contactBandTitle"
+    >
+      <div class="container contact-band__inner">
+        <div class="contact-band__copy">
+          <h2 class="contact-band__title" id="contactBandTitle"></h2>
+          <p class="contact-band__subtitle" id="contactBandSubtitle"></p>
+          <hr class="contact-band__rule" />
+          <p class="contact-band__footer" id="contactBandFooter"></p>
+        </div>
+        <div class="contact-band__form-shell">
+          <form class="contact-band__form" id="contactBandForm" novalidate>
+            <h3 class="contact-band__form-title" id="contactBandFormTitle"></h3>
+            <label class="sr-only" for="band-fullname">Full Name</label>
+            <input
+              id="band-fullname"
+              name="bandFullName"
+              type="text"
+              autocomplete="name"
+              class="contact-band__input"
+              placeholder="Full Name"
+            />
+            <label class="sr-only" for="band-company">Company Name</label>
+            <input
+              id="band-company"
+              name="bandCompany"
+              type="text"
+              autocomplete="organization"
+              class="contact-band__input"
+              placeholder="Company Name"
+            />
+            <label class="sr-only" for="band-email">Email Address</label>
+            <input
+              id="band-email"
+              name="bandEmail"
+              type="email"
+              autocomplete="email"
+              class="contact-band__input"
+              placeholder="Email Address"
+            />
+            <div class="contact-band__phone-row" role="group" aria-label="Phone number">
+              <label class="sr-only" for="band-dial">Country code</label>
+              <select id="band-dial" name="bandDialCode" class="contact-band__dial" aria-label="Country calling code">
+                <option value="+91" selected>+91</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+              </select>
+              <label class="sr-only" for="band-phone">Phone number</label>
+              <input
+                id="band-phone"
+                name="bandPhone"
+                type="tel"
+                autocomplete="tel"
+                class="contact-band__phone-num"
+                placeholder="7003026616"
+              />
+            </div>
+            <button type="button" class="contact-band__submit btn" data-open-callback-modal>
+              <span data-contact-band-submit-label>Request Custom Quote</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" id="siteFooter" data-site-footer hidden>
+    <div class="container site-footer__wrap">
+      <div class="site-footer__banner">
+        <a class="site-footer__logo" href="#" aria-label="Mangalam HDPE Pipes home">
+          <img src="logo.png" alt="Mangalam HDPE Pipes" width="220" height="72" decoding="async" />
+        </a>
+        <p class="site-footer__tagline" id="footerTagline"></p>
+      </div>
+      <div class="site-footer__cols" id="footerCols"></div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright" id="footerCopyright"></p>
+        <nav class="site-footer__legal" id="footerLegal" aria-label="Legal"></nav>
+      </div>
+    </div>
+  </footer>
 
   <div
     class="modal"
@@ -255,7 +487,7 @@
   </div>
 
   <div
-    class="modal"
+    class="modal modal--quote"
     id="modal-callback"
     role="dialog"
     aria-modal="true"
@@ -264,43 +496,66 @@
     hidden
   >
     <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
-    <div class="modal__panel">
-      <header class="modal__header">
+    <div class="modal__panel modal__panel--quote">
+      <header class="modal__header modal__header--quote">
         <h2 id="modal-callback-title">Request a call back</h2>
-        <button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
+        <button type="button" class="modal__close modal__close--quote" data-modal-close aria-label="Close dialog">
           &times;
         </button>
       </header>
-      <form class="modal__body" id="form-callback" novalidate>
-        <div class="modal__field">
-          <label for="cb-fullname">Full Name</label>
-          <input id="cb-fullname" name="fullName" type="text" autocomplete="name" placeholder="Full Name" />
-        </div>
-        <div class="modal__field">
-          <label for="cb-company">Company Name</label>
-          <input id="cb-company" name="company" type="text" autocomplete="organization" placeholder="Company Name" />
-        </div>
-        <div class="modal__field">
-          <label for="cb-email">Email Address</label>
-          <input id="cb-email" name="email" type="email" autocomplete="email" placeholder="Email Address" />
-        </div>
-        <div class="modal__field modal__field--phone">
-          <div class="modal__field">
-            <label for="cb-dial">Code</label>
-            <select id="cb-dial" name="dialCode" aria-label="Country calling code">
+      <form id="form-callback" class="modal__form-quote" novalidate>
+        <div class="modal__body modal__body--quote">
+          <div class="modal__field-quote">
+            <label class="sr-only" for="cb-fullname">Full Name</label>
+            <input
+              id="cb-fullname"
+              name="fullName"
+              type="text"
+              autocomplete="name"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="modal__field-quote">
+            <label class="sr-only" for="cb-company">Company Name</label>
+            <input
+              id="cb-company"
+              name="company"
+              type="text"
+              autocomplete="organization"
+              placeholder="Company Name"
+            />
+          </div>
+          <div class="modal__field-quote">
+            <label class="sr-only" for="cb-email">Email Address</label>
+            <input
+              id="cb-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="modal__phone-row" role="group" aria-label="Phone number">
+            <label class="sr-only" for="cb-dial">Country code</label>
+            <select id="cb-dial" name="dialCode" class="modal__phone-dial" aria-label="Country calling code">
               <option value="+91" selected>+91</option>
               <option value="+1">+1</option>
               <option value="+44">+44</option>
             </select>
-          </div>
-          <div class="modal__field">
-            <label for="cb-phone">Phone Number</label>
-            <input id="cb-phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone Number" />
+            <label class="sr-only" for="cb-phone">Phone number</label>
+            <input
+              id="cb-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              class="modal__phone-num"
+              placeholder="7003026616"
+            />
           </div>
         </div>
-        <div class="modal__footer">
-          <button type="submit" class="btn btn--modal-primary">Submit Form</button>
-        </div>
+        <footer class="modal__footer modal__footer--quote">
+          <button type="submit" class="btn btn--modal-quote">Submit Form</button>
+        </footer>
       </form>
     </div>
   </div>

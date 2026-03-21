@@ -205,5 +205,346 @@
         "body": "HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode, rust, or scale, ensuring pure water quality and extended service life in aggressive environments."
       }
     ]
+  },
+  "faqSection": {
+    "titleAccent": "Frequently",
+    "titleRest": "Asked Questions",
+    "items": [
+      {
+        "question": "What pressure classes do Mangalam HDPE pipes support?",
+        "answer": "Our range covers PN 2.5 through PN 16 depending on diameter and SDR. Project-specific rating tables are available in the technical datasheet and our team can help you select the right class for your application.",
+        "defaultOpen": true
+      },
+      {
+        "question": "What jointing methods are recommended for buried mains?",
+        "answer": "Butt fusion and electrofusion are the primary methods for pressure-rated joints. Mechanical fittings may be used where approved for the service class. Fusion procedures should follow manufacturer guidelines and trained installer practice."
+      },
+      {
+        "question": "How does HDPE perform in aggressive soils or effluent?",
+        "answer": "HDPE is highly resistant to corrosion and many chemicals compared to metallic systems. For unusual chemistry, refer to compatibility guidance or request a project review from our applications team."
+      },
+      {
+        "question": "What lengths are available for coil products?",
+        "answer": "Coil lengths depend on diameter and transport limits; long continuous lengths are a key benefit of HDPE. Contact us with your diameter and route length for available coil options."
+      },
+      {
+        "question": "Can products be supplied with third-party certification documentation?",
+        "answer": "Yes. We support BIS, ISO, and project-specific documentation packages. Specify your requirements when requesting a quote or catalogue."
+      }
+    ]
+  },
+  "catalogueCta": {
+    "title": "Want us to email the entire catalogue?",
+    "subtitle": "Enter your email and an expert will share the catalogue with you.",
+    "placeholder": "Email Address",
+    "buttonLabel": "Request Catalogue"
+  },
+  "applicationsSection": {
+    "title": "Versatile Applications Across Industries",
+    "subtitle": "From water infrastructure to industrial process lines, our HDPE piping systems deliver reliable performance across diverse installation environments.",
+    "cards": [
+      {
+        "title": "Water Distribution Networks",
+        "description": "Potable water transmission and distribution mains with butt- and electrofusion joints, low leakage risk, and 50+ year design life in urban, peri-urban, and rural water supply schemes.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Industrial site crew handling materials for water infrastructure piping"
+      },
+      {
+        "title": "Industrial Process Piping",
+        "description": "Chemical-resistant PE100 systems for process water, effluent headers, and cooling water loops where metallic corrosion, scaling, and unplanned shutdowns are unacceptable.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Workers on site with industrial mesh and piping materials"
+      },
+      {
+        "title": "Gas & Utility Ducting",
+        "description": "Engineered polyethylene solutions for approved gas distribution, cable protection, and utility ducting with batch traceability, marking, and conformance to project standards.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Safety crew handling industrial netting near utility works"
+      },
+      {
+        "title": "Mining & Site Services",
+        "description": "Rugged temporary and permanent lines for mine dewatering, process water, and slurry handling where abrasion resistance, coil lengths, and rapid field deployment count.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Mining or construction workers with safety gear and materials"
+      },
+      {
+        "title": "Agricultural Irrigation",
+        "description": "Large-diameter and coil HDPE for pressurised irrigation networks, lift schemes, and distribution laterals with UV-stabilised black compound options for exposed runs.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Field operations crew with industrial equipment"
+      },
+      {
+        "title": "Wastewater & Reuse",
+        "description": "Sewerage rising mains, treatment plant interconnects, and reclaimed-water lines benefiting from corrosion immunity, smooth bore hydraulics, and leak-tested fusion joints.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Industrial workers handling netting on a project deck"
+      },
+      {
+        "title": "Marine & Coastal Outfalls",
+        "description": "Diffuser and outfall pipelines where flexibility, joint integrity, and resistance to salt spray and tidal zones support long service in harsh coastal environments.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Deck crew handling bright industrial netting"
+      },
+      {
+        "title": "Power & Desalination",
+        "description": "Cooling water circuits, intake and reject lines, and balance-of-plant services where dimensional stability, pressure rating tables, and documented fusion procedures simplify QA.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Industrial safety team with materials on site"
+      }
+    ]
+  },
+  "manufacturingSection": {
+    "title": "Advanced HDPE Pipe Manufacturing Process",
+    "subtitle": "Our state-of-the-art extrusion technology ensures consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.",
+    "steps": [
+      {
+        "id": "raw",
+        "label": "Raw Material",
+        "cardTitle": "High-Grade Raw Material Selection",
+        "body": "Virgin PE100 compound is sourced and verified for density, melt flow, and UV stabilisation so every batch meets specification before extrusion.",
+        "bullets": [
+          "PE100 grade material with full traceability",
+          "Optimal molecular weight distribution for pressure rating"
+        ],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Material handling" },
+          { "src": "fishnet.jpg", "alt": "PE compound quality checks" }
+        ]
+      },
+      {
+        "id": "extrusion",
+        "label": "Extrusion",
+        "cardTitle": "Precision Extrusion",
+        "body": "Single-screw extrusion with temperature and pressure control delivers a homogeneous melt profile and stable output for consistent wall thickness.",
+        "bullets": ["Controlled melt temperature zones", "Screen packs for melt cleanliness"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Extrusion line" },
+          { "src": "fishnet.jpg", "alt": "Melt profile monitoring" }
+        ]
+      },
+      {
+        "id": "cooling",
+        "label": "Cooling",
+        "cardTitle": "Controlled Cooling",
+        "body": "Calibration and cooling tanks stabilise dimensions and relieve residual stresses before downstream sizing.",
+        "bullets": ["Vacuum calibration where applicable", "Graduated cooling to protect properties"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Cooling" },
+          { "src": "fishnet.jpg", "alt": "Calibration tanks" }
+        ]
+      },
+      {
+        "id": "sizing",
+        "label": "Sizing",
+        "cardTitle": "Dimensional Accuracy",
+        "body": "Sizing tooling and on-line gauging keep OD, wall thickness, and ovality within tight tolerances.",
+        "bullets": ["Continuous OD / wall monitoring", "Automatic line speed coordination"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Sizing" },
+          { "src": "fishnet.jpg", "alt": "On-line gauging" }
+        ]
+      },
+      {
+        "id": "qc",
+        "label": "Quality Control",
+        "cardTitle": "In-Line Quality Control",
+        "body": "Destructive and non-destructive checks validate mechanical properties, fusion compatibility, and marking accuracy.",
+        "bullets": ["Batch sampling to standards", "Pressure and impact testing as per scope"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Quality control" },
+          { "src": "fishnet.jpg", "alt": "Testing and inspection" }
+        ]
+      },
+      {
+        "id": "marking",
+        "label": "Marking",
+        "cardTitle": "Traceability Marking",
+        "body": "Laser or embossed marking carries standard references, production date, and batch codes for full traceability.",
+        "bullets": ["IS / ISO reference marking", "Readable at point of installation"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Marking" },
+          { "src": "fishnet.jpg", "alt": "Batch codes and standards" }
+        ]
+      },
+      {
+        "id": "cutting",
+        "label": "Cutting",
+        "cardTitle": "Accurate Cutting",
+        "body": "Cut-to-length systems deliver square ends ready for field fusion or coupling.",
+        "bullets": ["Length tolerance per standard", "Chamfer preparation where specified"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Cutting" },
+          { "src": "fishnet.jpg", "alt": "Cut-to-length" }
+        ]
+      },
+      {
+        "id": "packaging",
+        "label": "Packaging",
+        "cardTitle": "Protective Packaging",
+        "body": "Coils and straight lengths are bundled and protected for safe transport to site.",
+        "bullets": ["Weather protection for outdoor storage", "Lifting-friendly coil packaging"],
+        "images": [
+          { "src": "fishnet.jpg", "alt": "Packaging" },
+          { "src": "fishnet.jpg", "alt": "Coils ready for dispatch" }
+        ]
+      }
+    ]
+  },
+  "trustSection": {
+    "title": "Trusted Performance. Proven Results.",
+    "subtitle": "Engineering teams and contractors rely on Mangalam HDPE for dependable fusion systems, documentation, and field support on critical infrastructure.",
+    "quotes": [
+      {
+        "headline": "Fusion-jointed HDPE reduced leakage callbacks on our last 40 km trunk main.",
+        "text": "The documentation package made third-party inspection straightforward.",
+        "author": "Project Engineer, Regional Water Board"
+      },
+      {
+        "headline": "We standardised on PE100 for industrial effluent headers.",
+        "text": "Chemical resistance and coil lengths cut installation time compared to our previous metallic system.",
+        "author": "Maintenance Head, Process Plant"
+      },
+      {
+        "headline": "Responsive technical support during tender stage",
+        "text": "Helped us lock in the right SDR and jointing method for a high-pressure irrigation scheme.",
+        "author": "Procurement Lead, Agri Infrastructure"
+      },
+      {
+        "headline": "Municipal reticulation upgrades stayed on programme.",
+        "text": "Coil lengths and butt-fusion training from the supplier meant fewer joints in trenches and cleaner as-built records for the city engineer.",
+        "author": "Site Supervisor, Urban Water Utility"
+      },
+      {
+        "headline": "HDPE held up where steel had corroded in eighteen months.",
+        "text": "We replaced coastal outfall headers with PE100; no galvanic issues and the crew appreciated the lighter handling on the jetty.",
+        "author": "Marine Works Contractor"
+      },
+      {
+        "headline": "Butt-fusion QA packs satisfied the owner’s verifier.",
+        "text": "Traceability from resin batch to field joint number was exactly what the EPC needed before hydrostatic sign-off.",
+        "author": "QA Manager, EPC Consortium"
+      },
+      {
+        "headline": "Mining site dewatering lines see stone impact and vibration.",
+        "text": "We’ve run these coils for three seasons without a fatigue failure; shutdown windows are short so reliability matters.",
+        "author": "Reliability Engineer, Open-Pit Mine"
+      },
+      {
+        "headline": "Gas distribution tie-ins needed documented fusion parameters.",
+        "text": "The field team followed the approved procedure deck; regulator questions were answered with datasheets and joint logs, not guesswork.",
+        "author": "Pipeline Lead, City Gas Network"
+      }
+    ]
+  },
+  "portfolioSection": {
+    "title": "Complete Piping Solutions Portfolio",
+    "subtitle": "From electrofusion fittings to on-site fusion welding, we deliver complete solutions for modern water, gas, and industrial HDPE systems.",
+    "cards": [
+      {
+        "title": "HDPE Fittings & Accessories",
+        "description": "Complete range of electrofusion and butt fusion fittings, including elbows, tees, reducers, and couplers for seamless pipe connections.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Field engineer reviewing fusion documentation on site",
+        "ctaLabel": "Learn More",
+        "ctaHref": "#"
+      },
+      {
+        "title": "Professional Installation Services",
+        "description": "Expert installation and fusion welding services ensuring optimal system performance, compliance with standards, and long-term reliability.",
+        "image": "fishnet.jpg",
+        "imageAlt": "Crew reviewing fusion parameters on a tablet at site",
+        "ctaLabel": "Learn More",
+        "ctaHref": "#"
+      },
+      {
+        "title": "PE-RT Heating Pipes",
+        "description": "Polyethylene of Raised Temperature resistance pipes ideal for underfloor heating, radiator connections, and hot water applications.",
+        "image": "fishnet.jpg",
+        "imageAlt": "PE-RT piping application reference",
+        "ctaLabel": "Learn More",
+        "ctaHref": "#"
+      }
+    ],
+    "bottomCta": {
+      "titleBefore": "Didn't find what",
+      "titleAccent": "you're looking for?",
+      "subtitle": "Talk to our experts for custom solutions and tailored guidance.",
+      "buttonLabel": "Talk to an Expert",
+      "buttonHref": "tel:+911800000000"
+    }
+  },
+  "resourcesSection": {
+    "title": "Resources & Downloads",
+    "subtitle": "Get all the technical documentation and resources you need to make informed decisions about our HDPE piping solutions.",
+    "items": [
+      {
+        "title": "HDPE Pipe Installation Manual (PDF)",
+        "href": "#",
+        "linkLabel": "Download PDF"
+      },
+      {
+        "title": "Maintenance & Inspection Handbook (PDF)",
+        "href": "#",
+        "linkLabel": "Download PDF"
+      },
+      {
+        "title": "Engineering Specifications Sheet (PDF)",
+        "href": "#",
+        "linkLabel": "Download PDF"
+      }
+    ]
+  },
+  "contactBandSection": {
+    "title": "Ready to Upgrade Your Piping Infrastructure?",
+    "subtitle": "Get a personalised consultation and quote for HDPE solutions tailored to your project requirements.",
+    "footerLead": "For immediate assistance, feel free to give us a direct call at",
+    "footerPhone": "+91-1800-XXX-XXXX",
+    "footerMid": "You can also send us a quick email at",
+    "footerEmail": "info@mangalamhdpe.com",
+    "formTitle": "Contact Us Today",
+    "submitLabel": "Request Custom Quote"
+  },
+  "footer": {
+    "taglineAccent": "Premium HDPE Pipes & Fittings",
+    "taglineRest": "Manufacturer in South India",
+    "about": {
+      "title": "About Us",
+      "links": [{ "label": "About Us", "href": "#" }]
+    },
+    "categories": {
+      "title": "Categories",
+      "links": [
+        { "label": "Water Distribution Networks", "href": "#" },
+        { "label": "Industrial Process Piping", "href": "#" },
+        { "label": "Gas & Utility Ducting", "href": "#" },
+        { "label": "Mining & Site Services", "href": "#" },
+        { "label": "Agricultural Irrigation", "href": "#" },
+        { "label": "Wastewater & Reuse", "href": "#" }
+      ]
+    },
+    "products": {
+      "title": "Products",
+      "useNavProducts": true,
+      "links": []
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "2126, Road No. 2, GIDC Sachin, Surat - 394 230 Gujarat, India",
+      "phone": "+91-XXX-XXX-XXXX",
+      "phoneHref": "tel:+9118000000000",
+      "email": "info@mangalamhdpe.com",
+      "supportEmail": "support@mangalamhdpe.com"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/",
+      "instagram": "https://www.instagram.com/"
+    },
+    "copyright": "Copyright © 2025 Mangalam HDPE Pipes | All Rights Reserved",
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Service", "href": "#" },
+      { "label": "Sitemap", "href": "#" }
+    ]
   }
 }
