@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gushwork | Mangalam HDPE Pipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="site-header__wrap">
+      <div class="container site-header__inner">
+      <a class="site-header__logo" href="#" aria-label="Mangalam HDPE Pipes home">
+        <img src="public/logo.png" alt="Mangalam HDPE Pipes" width="220" height="80" decoding="async">
+      </a>
+      <nav class="site-header__nav" aria-label="Primary navigation">
+        <ul class="site-header__links">
+          <li class="site-header__links-item">
+            <a class="site-header__nav-link" href="#">About Us</a>
+          </li>
+          <li class="site-header__links-item">
+            <div class="nav-dropdown" data-products-dropdown>
+              <button
+                type="button"
+                class="site-header__nav-link nav-dropdown__trigger"
+                id="navProductsButton"
+                data-dropdown-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="navProductsPanel"
+              >
+                <span class="nav-dropdown__label">Products</span>
+                <span class="nav-dropdown__chevron" aria-hidden="true">
+                  <svg class="nav-dropdown__chevron-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                    <path d="M1 1.5L6 6L11 1.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <ul class="nav-dropdown__panel" id="navProductsPanel" role="menu" data-dropdown-panel hidden></ul>
+            </div>
+          </li>
+          <li class="site-header__links-item">
+            <a class="btn btn--primary btn--header site-header__cta" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="product-hero" aria-label="Product showcase">
+      <div class="container">
+        <div class="product-hero__grid">
+          <nav class="breadcrumbs product-hero__breadcrumbs" aria-label="Breadcrumb">
+            <ol class="breadcrumbs__list" id="jsonBreadcrumbs"></ol>
+          </nav>
+
+          <div class="product-page__media">
+            <div class="product-carousel" data-carousel>
+              <div class="product-carousel__stage">
+                <button type="button" class="product-carousel__arrow product-carousel__arrow--prev" aria-label="Previous image" data-carousel-prev>
+                  <span aria-hidden="true">&#8249;</span>
+                </button>
+                <div
+                  class="product-carousel__viewport"
+                  role="region"
+                  aria-roledescription="carousel"
+                  aria-label="Product images"
+                  tabindex="0"
+                >
+                  <div class="product-carousel__track" id="carouselTrack" data-carousel-track></div>
+                </div>
+                <button type="button" class="product-carousel__arrow product-carousel__arrow--next" aria-label="Next image" data-carousel-next>
+                  <span aria-hidden="true">&#8250;</span>
+                </button>
+              </div>
+
+              <div class="product-carousel__thumbs" role="tablist" id="carouselThumbs" aria-label="Image thumbnails"></div>
+            </div>
+          </div>
+
+          <div class="product-page__detail product-page__detail--hero">
+            <ul class="cert-badges" id="productCertBadges" aria-label="Certifications"></ul>
+
+            <h1 class="product-title product-title--on-dark" id="productTitle"></h1>
+
+            <ul class="feature-list feature-list--on-dark" id="productFeatures"></ul>
+
+            <div class="price-card">
+              <p class="price-card__label">Price Range</p>
+              <p class="price-card__value" id="jsonPriceRange"></p>
+              <div class="price-card__tags">
+                <span class="price-card__tag price-card__tag--ship" id="jsonShippingTag"></span>
+                <span class="price-card__tag price-card__tag--return" id="jsonReturnsTag"></span>
+              </div>
+              <p class="price-card__foot" id="jsonCertLine"></p>
+            </div>
+
+            <div class="product-ctas" data-product-ctas>
+              <a class="btn btn--primary btn--lg" href="#" data-cta-quote>Get Custom Quote</a>
+              <a class="btn btn--outline btn--lg" href="#" data-cta-specs>
+                <span data-cta-specs-label>View Technical Specs</span>
+                <span class="btn__chevron" aria-hidden="true">&#8250;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="trusted-by" aria-label="Trusted partner brands">
+          <p class="trusted-by__headline" id="trustedHeadline"></p>
+          <div class="trusted-by__marquee">
+            <div class="trusted-by__track" id="trustedMarqueeTrack"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section
+      class="tech-specs"
+      id="technical-specs"
+      aria-labelledby="techSpecsHeading"
+      hidden
+      data-tech-specs-section
+    >
+      <div class="container tech-specs__inner">
+        <h2 class="tech-specs__title" id="techSpecsHeading"></h2>
+        <p class="tech-specs__subtitle" id="techSpecsSubtitle"></p>
+        <div class="tech-specs__table-card">
+          <div class="tech-specs__table-scroll">
+            <table class="tech-specs__table">
+              <thead>
+                <tr>
+                  <th scope="col" class="tech-specs__col-head">Parameter</th>
+                  <th scope="col" class="tech-specs__col-head">Specification</th>
+                </tr>
+              </thead>
+              <tbody id="techSpecsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tech-specs__actions">
+          <a
+            class="btn btn--datasheet-ghost"
+            href="#"
+            data-datasheet-download
+            id="techSpecsDatasheetBtn"
+          >
+            <svg
+              class="btn--datasheet-ghost__icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M12 4v11M8 11l4 4 4-4M5 21h14"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span data-datasheet-label>Download Full Technical Datasheet</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/content.js" defer></script>
+  <script src="js/buttons.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

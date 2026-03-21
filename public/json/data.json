@@ -1,0 +1,172 @@
+{
+  "siteName": "Mangalam HDPE Pipes",
+  "products": [
+    {
+      "id": "hdpe-pipes",
+      "title": "Premium HDPE Pipes & Coils for Modern Infrastructure",
+      "images": [
+        {
+          "src": "public/fishnet.jpg",
+          "alt": "Workers on a vessel deck handling bright orange fishing net"
+        }
+      ],
+      "carouselSlides": 6,
+      "breadcrumbs": [
+        { "label": "Products", "href": "#" },
+        { "label": "HDPE Pipes", "current": true }
+      ],
+      "certBadges": [
+        { "label": "BIS Certified", "iconVariant": "primary" },
+        { "label": "ISO Certified", "iconVariant": "dark" },
+        { "label": "CE Certified", "iconVariant": "dark" }
+      ],
+      "features": [
+        "Leak-Proof Fusion Joints",
+        "Chemical Resistance",
+        "50+ Year Service Life",
+        "Flexible Installation",
+        "UV Resistance"
+      ],
+      "priceRange": "₹4,80,000 - 7,90,000",
+      "shippingLabel": "Shipping: 6-12 days",
+      "returnsLabel": "Returns: If returned within 7 days",
+      "certificationsSummary": "Certifications: ISO Certified, BIS Certified",
+      "ctaQuote": { "label": "Get Custom Quote", "href": "#" },
+      "ctaSpecs": { "label": "View Technical Specs", "href": "#technical-specs" },
+      "technicalSpecs": {
+        "title": "Technical Specifications at a Glance",
+        "subtitle": "Comprehensive performance data demonstrating our commitment to quality and engineering excellence.",
+        "rows": [
+          { "parameter": "Pipe Diameter Range", "specification": "20mm to 1600mm (3/4\" to 63\")" },
+          { "parameter": "Pressure Ratings", "specification": "PN 2.5, PN 4, PN 6, PN 8, PN 10, PN 12.5, PN 16" },
+          { "parameter": "Standard Dimension Ratio", "specification": "SDR 33, SDR 26, SDR 21, SDR 17, SDR 13.6, SDR 11" },
+          { "parameter": "Operating Temperature", "specification": "-40°C to +80°C (-40°F to +176°F)" },
+          { "parameter": "Service Life", "specification": "50+ Years (at 20°C, PN 10)" },
+          { "parameter": "Material Density", "specification": "0.95 - 0.96 g/cm³" },
+          { "parameter": "Certification Standards", "specification": "IS 4984, ISO 4427, ASTM D3035" },
+          { "parameter": "Joint Type", "specification": "Butt Fusion, Electrofusion, Mechanical" },
+          { "parameter": "Coil Lengths", "specification": "Up to 500 m (for smaller diameters)" },
+          { "parameter": "Country of Origin", "specification": "🇮🇳 India" }
+        ],
+        "datasheetDownload": {
+          "label": "Download Full Technical Datasheet",
+          "href": "#"
+        }
+      }
+    },
+    {
+      "id": "coils",
+      "title": "Heavy-Duty HDPE Coils for Long-Run Installations",
+      "images": [
+        {
+          "src": "public/fishnet.jpg",
+          "alt": "Coiled HDPE product on site"
+        }
+      ],
+      "carouselSlides": 6,
+      "breadcrumbs": [
+        { "label": "Products", "href": "#" },
+        { "label": "Coils", "current": true }
+      ],
+      "certBadges": [
+        { "label": "ISO Certified", "iconVariant": "primary" },
+        { "label": "BIS Certified", "iconVariant": "dark" }
+      ],
+      "features": [
+        "Long continuous lengths",
+        "Reduced joint count",
+        "Easy field deployment",
+        "Corrosion-free service life"
+      ],
+      "priceRange": "₹3,20,000 - 5,50,000",
+      "shippingLabel": "Shipping: 8-14 days",
+      "returnsLabel": "Returns: If returned within 7 days",
+      "certificationsSummary": "Certifications: ISO Certified",
+      "ctaQuote": { "label": "Get Custom Quote", "href": "#" },
+      "ctaSpecs": { "label": "View Technical Specs", "href": "#technical-specs" },
+      "technicalSpecs": {
+        "title": "Technical Specifications at a Glance",
+        "subtitle": "Coil-specific performance data for long-run HDPE deployments.",
+        "rows": [
+          { "parameter": "Nominal Coil Lengths", "specification": "Up to 500 m (diameter dependent)" },
+          { "parameter": "Diameter Range", "specification": "20mm to 630mm (common coil sizes)" },
+          { "parameter": "Pressure Ratings", "specification": "PN 6, PN 8, PN 10, PN 12.5, PN 16" },
+          { "parameter": "SDR Series", "specification": "SDR 26, SDR 21, SDR 17, SDR 13.6, SDR 11" },
+          { "parameter": "Operating Temperature", "specification": "-40°C to +60°C (refer to rating tables)" },
+          { "parameter": "Service Life", "specification": "50+ Years (design-dependent)" },
+          { "parameter": "Material", "specification": "PE100 / PE80 per project spec" },
+          { "parameter": "Standards", "specification": "ISO 4427, IS 4984" },
+          { "parameter": "Jointing", "specification": "Butt fusion, electrofusion compatible" },
+          { "parameter": "Country of Origin", "specification": "🇮🇳 India" }
+        ],
+        "datasheetDownload": {
+          "label": "Download Full Technical Datasheet",
+          "href": "#"
+        }
+      }
+    },
+    {
+      "id": "fittings",
+      "title": "Precision HDPE Fittings & Fusion Accessories",
+      "images": [
+        {
+          "src": "public/fishnet.jpg",
+          "alt": "HDPE fittings and accessories"
+        }
+      ],
+      "carouselSlides": 6,
+      "breadcrumbs": [
+        { "label": "Products", "href": "#" },
+        { "label": "Fittings", "current": true }
+      ],
+      "certBadges": [
+        { "label": "CE Certified", "iconVariant": "primary" },
+        { "label": "ISO Certified", "iconVariant": "dark" }
+      ],
+      "features": [
+        "Electrofusion & butt fusion options",
+        "Pressure-rated assemblies",
+        "Tested leak performance",
+        "Wide diameter coverage"
+      ],
+      "priceRange": "₹85,000 - 2,40,000",
+      "shippingLabel": "Shipping: 4-8 days",
+      "returnsLabel": "Returns: If returned within 7 days",
+      "certificationsSummary": "Certifications: CE Certified, ISO Certified",
+      "ctaQuote": { "label": "Get Custom Quote", "href": "#" },
+      "ctaSpecs": { "label": "View Technical Specs", "href": "#technical-specs" },
+      "technicalSpecs": {
+        "title": "Technical Specifications at a Glance",
+        "subtitle": "Fitting and accessory ratings aligned with fusion pipe systems.",
+        "rows": [
+          { "parameter": "Pressure Classes", "specification": "PN 10, PN 16 (range by fitting type)" },
+          { "parameter": "Diameter Coverage", "specification": "20mm to 800mm (product family dependent)" },
+          { "parameter": "Fusion Methods", "specification": "Electrofusion, butt fusion, stub-end / flange" },
+          { "parameter": "Operating Temperature", "specification": "-40°C to +80°C (per component rating)" },
+          { "parameter": "Material", "specification": "PE100 black compound, UV stabilised where specified" },
+          { "parameter": "Standards", "specification": "ISO 4427, EN 12201, IS 4984 (as applicable)" },
+          { "parameter": "Leak Testing", "specification": "Factory pressure tested to declared PN" },
+          { "parameter": "Chemical Resistance", "specification": "HDPE matrix — refer to chemical compatibility tables" },
+          { "parameter": "Marking", "specification": "Traceability batch codes on each component" },
+          { "parameter": "Country of Origin", "specification": "🇮🇳 India" }
+        ],
+        "datasheetDownload": {
+          "label": "Download Full Technical Datasheet",
+          "href": "#"
+        }
+      }
+    }
+  ],
+  "navProducts": [
+    { "label": "HDPE Pipes", "productId": "hdpe-pipes" },
+    { "label": "Coils", "productId": "coils" },
+    { "label": "Fittings", "productId": "fittings" }
+  ],
+  "defaultProductId": "hdpe-pipes",
+  "trustedBy": {
+    "headline": "Trusted by Hundreds of Companies Globally",
+    "logoSrc": "public/euroflex.png",
+    "logoAlt": "Euroflex",
+    "logosPerSegment": 6
+  }
+}
