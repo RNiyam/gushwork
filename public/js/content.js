@@ -1,11 +1,11 @@
 /**
- * Loads public/json/data.json and fills the product page (same idea as JSON-driven content).
+ * Loads json/data.json and fills the product page (same idea as JSON-driven content).
  * Run before js/buttons.js so the carousel exists in the DOM.
  */
 (function (global) {
   "use strict";
 
-  var DATA_URL = "public/json/data.json";
+  var DATA_URL = "json/data.json";
 
   var CERT_SVG =
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>';
@@ -220,7 +220,7 @@
     if (!headline || !track || !cfg) return;
     headline.textContent = cfg.headline || "";
     var n = Math.max(1, parseInt(cfg.logosPerSegment, 10) || 6);
-    var src = cfg.logoSrc || "public/euroflex.png";
+    var src = cfg.logoSrc || "euroflex.png";
     var alt = cfg.logoAlt || "Partner";
     function segment(isDuplicate) {
       var imgs = "";

@@ -1,6 +1,6 @@
 /**
  * Loads JSON content first, then wires buttons (carousel, dropdown, CTAs).
- * Use a local dev server (e.g. Live Server) so fetch() can read public/json/data.json.
+ * Use a local dev server rooted at public/ (e.g. open public/index.html) so fetch() can read json/data.json.
  */
 (function () {
   "use strict";
