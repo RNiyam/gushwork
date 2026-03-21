@@ -11,16 +11,22 @@
 
     if (typeof load !== "function") {
       if (typeof init === "function") init();
+      var m = window.MangalamPage && window.MangalamPage.initButtonModals;
+      if (typeof m === "function") m();
       return;
     }
 
     load()
       .then(function () {
         if (typeof init === "function") init();
+        var modals = window.MangalamPage && window.MangalamPage.initButtonModals;
+        if (typeof modals === "function") modals();
       })
       .catch(function (err) {
         console.error("[MangalamPage] Failed to load JSON:", err);
         if (typeof init === "function") init();
+        var modals = window.MangalamPage && window.MangalamPage.initButtonModals;
+        if (typeof modals === "function") modals();
       });
   });
 })();

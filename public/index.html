@@ -57,20 +57,13 @@
     <section class="product-hero" aria-label="Product showcase">
       <div class="container">
         <div class="product-hero__grid">
-          <nav class="breadcrumbs product-hero__breadcrumbs" aria-label="Breadcrumb">
-            <ol class="breadcrumbs__list" id="jsonBreadcrumbs"></ol>
-          </nav>
+          <div class="product-hero__left">
+            <nav class="breadcrumbs product-hero__breadcrumbs" aria-label="Breadcrumb">
+              <ol class="breadcrumbs__list" id="jsonBreadcrumbs"></ol>
+            </nav>
 
-          <div class="product-hero__intro">
-            <ul class="cert-badges" id="productCertBadges" aria-label="Certifications"></ul>
-
-            <h1 class="product-title product-title--on-dark" id="productTitle"></h1>
-
-            <ul class="feature-list feature-list--on-dark" id="productFeatures"></ul>
-          </div>
-
-          <div class="product-page__media">
-            <div class="product-carousel" data-carousel>
+            <div class="product-page__media">
+              <div class="product-carousel" data-carousel>
               <div class="product-carousel__stage">
                 <button type="button" class="product-carousel__arrow product-carousel__arrow--prev" aria-label="Previous image" data-carousel-prev>
                   <span aria-hidden="true">&#8249;</span>
@@ -89,27 +82,40 @@
                 </button>
               </div>
 
-              <div class="product-carousel__thumbs" role="tablist" id="carouselThumbs" aria-label="Image thumbnails"></div>
+                <div class="product-carousel__thumbs" role="tablist" id="carouselThumbs" aria-label="Image thumbnails"></div>
+              </div>
             </div>
           </div>
 
-          <div class="product-hero__commerce">
-            <div class="price-card">
-              <p class="price-card__label">Price Range</p>
-              <p class="price-card__value" id="jsonPriceRange"></p>
-              <div class="price-card__tags">
-                <span class="price-card__tag price-card__tag--ship" id="jsonShippingTag"></span>
-                <span class="price-card__tag price-card__tag--return" id="jsonReturnsTag"></span>
-              </div>
-              <p class="price-card__foot" id="jsonCertLine"></p>
+          <div class="product-hero__right">
+            <div class="product-hero__intro">
+            <ul class="cert-badges" id="productCertBadges" aria-label="Certifications"></ul>
+
+            <h1 class="product-title product-title--on-dark" id="productTitle"></h1>
+
+              <ul class="feature-list feature-list--on-dark" id="productFeatures"></ul>
             </div>
 
-            <div class="product-ctas" data-product-ctas>
-              <a class="btn btn--primary btn--lg" href="#" data-cta-quote>Get Custom Quote</a>
-              <a class="btn btn--outline btn--lg" href="#" data-cta-specs>
-                <span data-cta-specs-label>View Technical Specs</span>
-                <span class="btn__chevron" aria-hidden="true">&#8250;</span>
-              </a>
+            <div class="product-hero__commerce">
+              <div class="price-card">
+                <p class="price-card__label">Price Range</p>
+                <p class="price-card__value" id="jsonPriceRange"></p>
+                <div class="price-card__tags">
+                  <span class="price-card__tag price-card__tag--ship" id="jsonShippingTag"></span>
+                  <span class="price-card__tag price-card__tag--return" id="jsonReturnsTag"></span>
+                </div>
+                <p class="price-card__foot" id="jsonCertLine"></p>
+              </div>
+
+              <div class="product-ctas" data-product-ctas>
+                <button type="button" class="btn btn--primary btn--lg" data-cta-quote data-open-callback-modal>
+                  Get Custom Quote
+                </button>
+                <a class="btn btn--outline btn--lg" href="#" data-cta-specs>
+                  <span data-cta-specs-label>View Technical Specs</span>
+                  <span class="btn__chevron" aria-hidden="true">&#8250;</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -147,11 +153,11 @@
           </div>
         </div>
         <div class="tech-specs__actions">
-          <a
+          <button
+            type="button"
             class="btn btn--datasheet-ghost"
-            href="#"
-            data-datasheet-download
             id="techSpecsDatasheetBtn"
+            data-open-catalogue-modal
           >
             <svg
               class="btn--datasheet-ghost__icon"
@@ -172,14 +178,136 @@
               />
             </svg>
             <span data-datasheet-label>Download Full Technical Datasheet</span>
-          </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="features-fold"
+      id="features-below-specs"
+      aria-labelledby="featuresFoldTitle"
+      hidden
+      data-features-fold
+    >
+      <div class="container features-fold__inner">
+        <h2 class="features-fold__title" id="featuresFoldTitle"></h2>
+        <p class="features-fold__subtitle features-fold__sub" id="featuresFoldSubtitle"></p>
+        <div class="features-fold__grid" id="featuresFoldGrid"></div>
+        <div class="features-fold__cta-wrap">
+          <button
+            type="button"
+            class="btn btn--primary btn--lg"
+            id="featuresFoldCta"
+            data-open-catalogue-modal
+          >
+            Request a Quote
+          </button>
         </div>
       </div>
     </section>
   </main>
 
+  <div
+    class="modal"
+    id="modal-catalogue"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-catalogue-title"
+    aria-hidden="true"
+    hidden
+  >
+    <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div class="modal__panel">
+      <header class="modal__header">
+        <h2 id="modal-catalogue-title">Let us email the entire catalogue to you</h2>
+        <button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
+          &times;
+        </button>
+      </header>
+      <form class="modal__body" id="form-catalogue" novalidate>
+        <div class="modal__field">
+          <label for="catalogue-email">Your Email *</label>
+          <input
+            id="catalogue-email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+            placeholder="example@gmail.com"
+          />
+        </div>
+        <div class="modal__field">
+          <label for="catalogue-contact">Your Contact (Optional)</label>
+          <input
+            id="catalogue-contact"
+            name="contact"
+            type="tel"
+            autocomplete="tel"
+            placeholder="+91-0000000000"
+          />
+        </div>
+        <div class="modal__footer">
+          <button type="submit" class="btn btn--modal-primary">Download Brochure</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="modal"
+    id="modal-callback"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-callback-title"
+    aria-hidden="true"
+    hidden
+  >
+    <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div class="modal__panel">
+      <header class="modal__header">
+        <h2 id="modal-callback-title">Request a call back</h2>
+        <button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
+          &times;
+        </button>
+      </header>
+      <form class="modal__body" id="form-callback" novalidate>
+        <div class="modal__field">
+          <label for="cb-fullname">Full Name</label>
+          <input id="cb-fullname" name="fullName" type="text" autocomplete="name" placeholder="Full Name" />
+        </div>
+        <div class="modal__field">
+          <label for="cb-company">Company Name</label>
+          <input id="cb-company" name="company" type="text" autocomplete="organization" placeholder="Company Name" />
+        </div>
+        <div class="modal__field">
+          <label for="cb-email">Email Address</label>
+          <input id="cb-email" name="email" type="email" autocomplete="email" placeholder="Email Address" />
+        </div>
+        <div class="modal__field modal__field--phone">
+          <div class="modal__field">
+            <label for="cb-dial">Code</label>
+            <select id="cb-dial" name="dialCode" aria-label="Country calling code">
+              <option value="+91" selected>+91</option>
+              <option value="+1">+1</option>
+              <option value="+44">+44</option>
+            </select>
+          </div>
+          <div class="modal__field">
+            <label for="cb-phone">Phone Number</label>
+            <input id="cb-phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone Number" />
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button type="submit" class="btn btn--modal-primary">Submit Form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src="js/content.js" defer></script>
   <script src="js/buttons.js" defer></script>
+  <script src="js/button.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
