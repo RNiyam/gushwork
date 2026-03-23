@@ -76,10 +76,22 @@
                   tabindex="0"
                 >
                   <div class="product-carousel__track" id="carouselTrack" data-carousel-track></div>
+                  <div class="hero-zoom-lens" id="heroZoomLens" hidden aria-hidden="true">
+                    <span class="hero-zoom-lens__icon" aria-hidden="true">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="6.5" stroke="currentColor" stroke-width="1.75" />
+                        <path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                        <path d="M10 7.5v5M7.5 10h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
                 <button type="button" class="product-carousel__arrow product-carousel__arrow--next" aria-label="Next image" data-carousel-next>
                   <span aria-hidden="true">&#8250;</span>
                 </button>
+                <div class="hero-zoom-result" id="heroZoomResult" role="img" aria-label="Magnified product view" hidden aria-hidden="true">
+                  <div class="hero-zoom-result__inner" id="heroZoomResultInner"></div>
+                </div>
               </div>
 
                 <div class="product-carousel__thumbs" role="tablist" id="carouselThumbs" aria-label="Image thumbnails"></div>
@@ -562,6 +574,7 @@
 
   <script src="js/content.js" defer></script>
   <script src="js/buttons.js" defer></script>
+  <script src="js/zoom.js" defer></script>
   <script src="js/button.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
